@@ -1,6 +1,5 @@
-def gcd(a,b):
-    if b==0:
-        return a
-    return gcd(b,a%b)
 a,b=map(int,input().split())
-print(gcd(a,b))
+for i in range (b+1,0,-1):
+    if(a%i==0 and b%i==0):
+        print(i)
+        break
