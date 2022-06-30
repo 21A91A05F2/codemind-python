@@ -1,5 +1,6 @@
-n=int(input())
-for i in range(n):
-    m,p=map(int,input().split())
-    s=m+p
-    print('%d'%s)
+t=int(input())
+while(t):
+    n,m=map(int,input().split())
+    l=n+m
+    print(l)
+    t-=1
