@@ -1,3 +1,4 @@
+
 n=input()
 v="aeiouAEIOU"
 c=0
