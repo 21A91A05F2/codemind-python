@@ -1,9 +1,11 @@
+
 s=input()
-ser=str(input())
-c=0
-if ser in s:
-    print('True')
-    print(s.index(ser))
+e=input()
+if e in s:
+    print(True)
+    print(s.index(e))
 else:
-    print('False')
-        
+    print(False)
+
+    
+    
