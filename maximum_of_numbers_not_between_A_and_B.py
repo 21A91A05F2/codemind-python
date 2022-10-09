@@ -1,9 +1,11 @@
 n=int(input())
 l=list(map(int,input().split()))
 a,b=map(int,input().split())
-m=-1
-for i in l:
-    if i<a or i>b:
-        if m<i:
-            m=i
-print(m)
+mx=0
+for i in range(n):
+    if (l[i]<a or l[i]>b) and l[i]>mx:
+        mx=l[i]
+if mx==0:
+    print(-1)
+else:
+    print(mx)
