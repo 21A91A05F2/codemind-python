@@ -1,8 +1,4 @@
-n=input()
-x=n.split()
-l=[]
-for i in x:
-    p=str(i)
-    q=len(p)
-    l.append(q)
-print(max(l))
+s=list(input().split(" "))
+for i in range(len(s)):
+    s[i]=len(s[i])
+print(max(s))
