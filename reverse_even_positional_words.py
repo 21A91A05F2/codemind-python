@@ -1,10 +1,8 @@
-n=input()
-x=n.split()
-
-for i in range(len(x)):
+s=input()
+l=s.split(" ")
+for i in range(len(l)):
     if i%2==0:
-        p=str(x[i])
-        print(p[::-1],end=' ')
+        print(l[i][::-1],end=" ")
     else:
-        p=str(x[i])
-        print(p,end=' ')
+        print(l[i],end=" ")
+
