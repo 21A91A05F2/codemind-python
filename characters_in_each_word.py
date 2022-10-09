@@ -1,6 +1,4 @@
-n=input()
-x=n.split()
-for i in x:
-    p=str(i)
-    q=len(p)
-    print(q,end=' ')
+s=input()
+l=s.split(" ")
+for i in l:
+    print(len(i),end=" ")
