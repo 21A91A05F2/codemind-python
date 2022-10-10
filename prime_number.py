@@ -1,12 +1,7 @@
-
 n = int(input())
-x = 1
-c=0
-while x<=n//2:
-    if n%x==0:
-        c+=1
-    x+=1
-if c==1:
-    print("prime")
+for i in range(2,int(n**0.5)+1):
+    if n%i==0:
+        print("not a prime")
+        break
 else:
-    print("not a prime")
+    print("prime")
