@@ -1,23 +1,25 @@
-
 def prime(n):
-    c = 0
-    for i in range(2,n//2):
-        if n%i==0:
-            c+=1
-    if c==0:
-        return True
-    else:
+    while n>0:
+        c=0
+        for i in range(2,int(n**0.5)+1):
+            if n%i==0:
+                c+=1
+        if c==0:
+            return n
         return False
-def rev(n):
-    r = 0
-    while n:
-        r=r*10+n%10
-        n//=10
-    return r
-n = int(input())
-if prime(n) and prime(rev(n)):
-    print("circular prime")
-elif prime(n) or prime(rev(n)):
-    print("prime but not a circular prime")
+n=int(input())
+if prime(n):
+    k=0
+    while(n>0):
+        r=n%10
+        k=k*10+r
+        n=n//10
 else:
     print("not prime")
+if prime(k):
+    print("circular prime")
+else:
+    print("prime but not a circular prime")
+    
+        
+    
