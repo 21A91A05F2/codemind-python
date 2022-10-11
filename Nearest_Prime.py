@@ -1,23 +1,41 @@
-def isprime(n):
-    if n==1:
-        return False
-    else:
-        for i in range(2,int(n**0.5)+1):
-            if n%i==0:
-                return False
-        return True
+def prime_left(x):
+    while x:
+        fact=0
+        c=2
+        count=0
+        while c<=x//2:
+            if x%c==0:
+                count+=1
+            c+=1
+        if count==0:
+            return x
+            break
+        x-=1
+def prime_right(x):
+    while x:
+        fact=0
+        c=2
+        count=0
+        while c<=x//2:
+            if x%c==0:
+                count+=1
+            c+=1
+        if count==0:
+            return x
+            break
+        x+=1
 
-t = int(input())
-for _ in range(t):
-    n = int(input())
-    f,b = n,n
-    while not isprime(f) and not isprime(b):
-        f+=1
-        b-=1
-    if isprime(f) and isprime(b):
-        print(min(f,b))
-    elif isprime(f):
-        print(f)
+n = int(input())
+while n:
+    num = int(input())
+    left = num
+    right = num
+    l=prime_left(left)
+    r=prime_right(right)
+    if r-num<num-l:
+        print(r)
     else:
-        print(b)
+        print(l)
+    n-=1
+    
         
