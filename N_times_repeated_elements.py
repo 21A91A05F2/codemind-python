@@ -1,12 +1,12 @@
-n=int(input())
-a=list(map(int,input().split()))
-c=int(input())
-b=[]
-for i in a:
-    if i not in b and a.count(i)==c:
-        b.append(i)
-if len(b)==0:
-    print(-1)
+
+n = int(input())
+arr = list(map(int,input().split()))
+k = int(input())
+a = []
+for i in range(n):
+    if arr.count(arr[i])==k and arr[i] not in a:
+        a.append(arr[i])
+if len(a)==0:
+    print("-1")
 else:
-    print(*b)
-    
+    print(*a)
