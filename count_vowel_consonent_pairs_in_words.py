@@ -1,14 +1,13 @@
 
-s=list(map(str,input().split( )))
+s = input().split(" ")
+v = 'aeiouAEIOU'
 c=0
-al="aeiou"
 for i in s:
-    i=i.lower()
-    a,b=0,len(i)-1
-    while a<b:
-        if ( i[a] in al and i[b] not in al ) or ( i[a] not in al and i[b] in al ):
-          c+=1
-        a+=1
-        b-=1
+    x=0
+    y=len(i)-1
+    while x<y:
+        if((i[x] in v and i[y] not in v)or(i[x] not in v and i[y] in v)):
+            c+=1
+        x+=1
+        y-=1
 print(c)
-       
