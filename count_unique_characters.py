@@ -1,7 +1,8 @@
-s=input()
-s=s.lower()
-k=[]
+
+s = input().lower()
+s = s.replace(" ","")
+c = 0
 for i in s:
-    if i not in k and s.count(i)==1 and i!=" ":
-        k.append(i)
-print(len(k))
+    if s.count(i)==1:
+        c+=1
+print(c)
