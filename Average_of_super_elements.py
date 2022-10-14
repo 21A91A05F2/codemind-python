@@ -1,10 +1,14 @@
-n=int(input())
-l=list(map(int,input().split()))
-b=[]
-for i in l:
-    if i not in b and l.count(i)==i:
-        b.append(i)
-if len(b)==0:
-    print(-1)
+
+n = int(input())
+arr = list(map(int,input().split()))
+c = 0
+s = 0
+for i in set(arr):
+    if arr.count(i)==i:
+        c+=1
+        s+=i
+if c==0:
+    print("-1")
 else:
-    print("{:.2f}".format(sum(b)/len(b)))
+    su=s/c
+    print("%.2f"%su)
