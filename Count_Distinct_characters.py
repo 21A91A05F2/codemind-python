@@ -1,9 +1,4 @@
-
-s=input()
-s=s.lower()
-k=set(s)
-g=[]
-for i in k:
-    if i!=" ":
-        g.append(i)
-print(len(g))
+s = input().lower()
+s = s.replace(" ","")
+s = set(s)
+print(len(s))
