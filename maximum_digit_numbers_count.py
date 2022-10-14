@@ -1,19 +1,18 @@
 n=int(input())
-a=list(map(int,input().split()))
-b=[]
-for i in a:
+l=list(map(int,input().split()))
+m=int(len(str(max(l))))
+a=[]
+for i in l:
     c=0
     if i==0:
         c=1
-        b.append(c)
+        a.append(c)
         continue
     if i<0:
         i=i*(-1)
-    while i:
-        d=i%10
-        c+=1
-        i//=10
-    b.append(c)
+    if i>0:
+        k=len(str(i))
+        a.append(k)
 for i in range(n):
-    if b[i]==max(b):
-        print(a[i],end=' ')
+    if a[i]==max(a):
+        print(l[i],end=" ")
