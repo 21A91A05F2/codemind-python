@@ -1,11 +1,8 @@
-s1=input()
-s2=input()
-s1=s1.lower()
-s2=s2.lower()
-a=list(s1.split(" "))
-b=list(s2.split(" "))
-c=[]
-for i in b:
-    if i in a and i not in c:
-        c.append(i)
-print(" ".join(c))
+
+a = input()
+b = input()
+a , b = a.lower() , b.lower()
+a , b = a.split(" ") , b.split(" ")
+for i in range(0,len(b)):
+    if b[i] in a:
+        print(b[i],end=" ")
