@@ -23,5 +23,3 @@ else:
         if prime(arr[i]):
             count+=1
     print(count)
-        
-    
