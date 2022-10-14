@@ -1,7 +1,7 @@
-s=input()
-a=list(s.split(" "))
-c=0
-for i in a:
-    if i[0] in "aeiouAEIOU" and i[-1] not in "aeiouAEIOU":
+s = input().split(" ")
+c = 0
+vo = "aeiouAEIOU"
+for i in s:
+    if i[0] in vo and i[-1] not in vo:
         c+=1
 print(c)
