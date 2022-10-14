@@ -1,7 +1,7 @@
-s=input()
-mn,mx=0,0
-l=list(s.split(" "))
-for i in l:
-    mn=ord(min(i))
-    mx=ord(max(i))
-    print(abs(mx-mn),end=" ")
+
+n = input()
+m = n.split(" ")
+for i in range(0,len(m)):
+    mi=ord(min(m[i]))
+    ma=ord(max(m[i]))
+    print(abs(mi-ma),end=" ")
