@@ -1,9 +1,7 @@
-s=list(map(str,input().split( )))
-m=min(s[-1])
-if ord(m)<97:
-    if chr(ord(m)+32) in s[-1]:
-        print(chr(ord(m)+32))
-    else:
-        print(m)
+s = list(map(str,input().split()))
+s = s[len(s)-1]
+n = min(s)
+if s.count(n.lower())!=0:
+    print(n.lower())
 else:
-    print(m)
+    print(n)
